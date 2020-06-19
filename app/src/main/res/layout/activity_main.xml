@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#2196F3"
+        android:src="@drawable/baseline_access_time_white_18dp"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_button_1"
+        app:layout_constraintEnd_toStartOf="@+id/fab_button_1"
+        app:layout_constraintTop_toBottomOf="@+id/fab_button_3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#9C27B0"
+        android:src="@drawable/ic_send"
+        android:tint="#FFFFFF"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_button_1"
+        app:layout_constraintEnd_toStartOf="@+id/fab_button_2"
+        app:layout_constraintTop_toTopOf="@+id/fab_button_2"
+        app:layout_constraintVertical_bias="0.222"
+        app:rippleColor="#28FFFFFF" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#F44336"
+        android:src="@drawable/ic_favorite"
+        android:tint="#FFFFFF"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_button_1"
+        app:layout_constraintEnd_toEndOf="@+id/fab_button_1"
+        app:layout_constraintStart_toStartOf="@+id/fab_button_1" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#009688"
+        android:src="@drawable/ic_add"
+        android:tint="#FFFFFF"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:rippleColor="#28FFFFFF" />
+
+
+    <com.ramotion.fluidslider.FluidSlider
+        android:id="@+id/fluidSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:elevation="2dp"
+        app:bar_color="#4CAF50"
+        app:duration="@android:integer/config_mediumAnimTime"
+        app:layout_constraintBottom_toBottomOf="@+id/camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:size="small"
+        tools:targetApi="lollipop" />
+
+    <com.camerakit.CameraKitView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:keepScreenOn="true"
+        app:camera_facing="front"
+        app:camera_focus="continuous"
+        app:camera_permissions="camera">
+
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="221dp"
+            android:layout_height="216dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="75dp"
+            android:layout_width="248dp"
+            android:layout_height="476dp">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/backimgview"
+            android:layout_width="46dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="5dp"
+            android:onClick="back_click" />
+
+    </com.camerakit.CameraKitView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8108747" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

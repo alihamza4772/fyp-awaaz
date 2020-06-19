@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SplashScreen"
+    android:background="#352641">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.52" />
+
+    <ImageView
+        android:id="@+id/person_imageview"
+        android:layout_width="240dp"
+        android:layout_height="358dp"
+        android:layout_marginTop="39dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/entername" />
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="410dp"
+        android:layout_height="449dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/continue_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/enternamebg"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/edt_enter_name"
+        android:layout_width="329dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="112dp"
+        android:autofillHints=""
+        android:background="@drawable/round_textbox"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:ems="10"
+        android:hint="@string/enter_your_name"
+        android:paddingStart="10dp"
+        android:textColorHint="#B0252525"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:targetApi="o" />
+
+    <ImageView
+        android:id="@+id/continue_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="name_click_next"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottom"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="318dp"
+        android:layout_height="65dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="I choose not to place ‘DIS’, in my ability"
+        android:gravity="center"
+        android:textColor="#2C2C2C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+</androidx.constraintlayout.widget.ConstraintLayout>

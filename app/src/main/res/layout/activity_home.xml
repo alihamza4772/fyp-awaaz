@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7FA"
+    tools:context=".Activity.HomeActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="307dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/homebg" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="414dp"
+        android:layout_height="527dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.916"
+        app:srcCompat="@drawable/homebg1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/uploadcardview"
+        android:layout_width="151dp"
+        android:layout_height="221dp"
+        android:layout_marginTop="68dp"
+        android:minHeight="200dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/livecardview"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/round"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="586dp">
+
+            <TextView
+                android:id="@+id/upload_img_text"
+                android:layout_width="139dp"
+                android:layout_height="38dp"
+                android:layout_below="@+id/imageView8"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Upload Image" />
+
+            <TextView
+                android:id="@+id/uploadimg_text_details"
+                android:layout_width="132dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/upload_img_text"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="31dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="You can upload a single and multiple Images from Gallery."
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="51dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="35dp"
+                android:foregroundGravity="center"
+                app:srcCompat="@drawable/uploadicon" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="Exit_click"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="@drawable/baseline_close_black_18dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="146dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="HOME"
+        android:textColor="#E4000000"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/livecardview"
+        android:layout_width="151dp"
+        android:layout_height="221dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="72dp"
+        android:minHeight="200dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/round"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:layout_editor_absoluteY="586dp">
+
+            <TextView
+                android:id="@+id/livevideotext"
+                android:layout_width="134dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/livevideoimgicon"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Live Video" />
+
+            <TextView
+                android:id="@+id/livevideotextdetails"
+                android:layout_width="139dp"
+                android:layout_height="78dp"
+                android:layout_below="@+id/livevideotext"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="Live Interpretation of signs with prediction and Voice interpretation"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/livevideoimgicon"
+                android:layout_width="51dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="35dp"
+                android:foregroundGravity="center"
+                app:srcCompat="@drawable/livevideoicon" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
